@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col col-9><ion-searchbar [(ngModel)]="query"></ion-searchbar></ion-col>
+    <ion-col col-3><button ion-button (click)="searchTrack()">Go</button></ion-col>
+  </ion-row>
+
+  <ion-card *ngFor="let track of tracks" (click)="goToPlayer(track.id)">
+    <img [src]="track.album.cover_medium"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ track.title }}
+        </ion-card-title>
+      <p>
+        {{ artist.name }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
