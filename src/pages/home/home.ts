@@ -17,7 +17,7 @@ export class HomePage {
   }
 
   searchTrack(){
-    this.musicApi.search('track', this.query).subscribe(response => this.tracks = response.json());
+    this.musicApi.search('track', this.query).subscribe(response => this.tracks = response.json().data);
   }
 
   goToPlayer(track){

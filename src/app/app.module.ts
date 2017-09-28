@@ -20,6 +20,8 @@ import { MusicApiProvider } from '../providers/music-api/music-api';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    FormsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
